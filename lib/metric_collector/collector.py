@@ -6,6 +6,7 @@ import os
 from metric_collector import netconf_collector
 from metric_collector import f5_rest_collector
 from metric_collector import utils
+from metric_collector import arcos_arcapi_collector
 
 logger = logging.getLogger('collector')
 global_measurement_prefix = 'metric_collector'
@@ -45,6 +46,7 @@ class Collector:
             host_address = self.hosts_manager.get_address(host)
             host_context = self.hosts_manager.get_context(host)
             device_type = self.hosts_manager.get_device_type(host)
+            print(device_type)
 
             if device_type == 'juniper':
                 dev = netconf_collector.NetconfCollector(
@@ -54,6 +56,12 @@ class Collector:
                 dev = f5_rest_collector.F5Collector(
                     host=host, address=host_address, credential=credential,
                     parsers=self.parser_manager, context=host_context, timeout=self.timeout)
+            elif device_type == 'arcos':
+                dev = arcos_arcapi_collector.ArcosCollector(
+                    host=host, address=host_address, credential=credential,
+                    parsers=self.parser_manager, context=host_context, timeout=self.timeout)
+
+
             dev.connect()
 
             if dev.is_connected():

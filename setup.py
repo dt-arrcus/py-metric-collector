@@ -11,8 +11,8 @@ except ImportError: # for pip <= 9.0.3
     
 __author__ = 'Damien Garros <dgarros@gmail.com>'
 
-requirements_data = parse_requirements('requirements.txt', session=uuid.uuid1())
-requirements = [str(package.req) for package in requirements_data]
+#requirements_data = parse_requirements('requirements.txt', session=uuid.uuid1())
+#requirements = [str(package.req) for package in requirements_data]
 
 version = '0.1.1'
 long_description = "Python Collector for Metrics Data, currently support Junos and F5"
@@ -30,7 +30,6 @@ params = {
     'author': 'Damien Garros',
     'author_email': 'dgarros@gmail.com',
     'description': 'Collect timeserie information from various devices, currently support Junos and F5',
-    'install_requires': requirements,
     'classifiers': [
         'Topic :: Utilities',
         'Environment :: Console',
