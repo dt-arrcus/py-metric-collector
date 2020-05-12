@@ -1,0 +1,96 @@
+# Emacs auto backup
+*#
+*~
+.#*
+
+# Object files
+*.o
+
+# Libraries
+*.lib
+*.a
+
+# Shared objects
+*.so
+*.so.*
+
+# Executables
+*.bin
+*.app
+
+# Vim Swap files
+.*.swp
+.*.swo
+
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+Makefile
+install_manifest.txt
+
+# Doxygen generated files
+doxygen/
+
+# Python binaries
+*.pyc
+*.egg-info
+dist/
+
+# Log files
+*.log
+
+# Robot framework generated files
+log.html
+output.xml
+report.html
+
+# Patch generated files
+*.orig
+*.rej
+
+# Cscope files
+cscope.*
+
+#Emacs tags/etags
+TAGS
+
+# Apple Finder files.
+.DS_Store
+.fuse*
+
+# Logging generated log files
+*logfile.txt
+
+# Exceptions for SDK libs
+!libsdk.so
+
+#visual studio
+*.vscode
+
+#Confd generated files
+*.fxs
+*.ccl
+# gprof files
+gmon.out
+
+build/*
+dstore/*
+include/*
+.gen
+
+ut_results
+
+# Required Debian packaging file which we now generate automatically.
+#debian/changelog
+
+# Igonoring packaging Information Files
+historical_build_info.json
+build_info_cfg.json
+gen*obj.c
+gen*obj.h
+dep_pkg_info.json
+
+#ignore dirs with protobuf desc files
+*/*/dstore/desc/*
+*/dstore/desc/*

@@ -1,0 +1,35 @@
+#!/usr/bin/env python
+# Create debian/changelog from a gbp-buildpackage prebuild hook.
+# The Debian package tools are rather fussy about changelog format, so
+# don't touch this unless you really know what you are doing.
+
+import subprocess
+import time
+import json
+import os
+
+git_dir   = os.getenv("GBP_GIT_DIR",   os.path.abspath(".git"))
+build_dir = os.getenv("GBP_BUILD_DIR", os.path.abspath("."))
+
+version = "0.0.1"
+
+def git(*cmd):
+    return subprocess.check_output(("git", "--git-dir", git_dir) + cmd).strip()
+
+timestamp = int(git("show", "-s", "--format=%ct", "HEAD"))
+commit    = git("rev-parse", "HEAD")
+
+changelog = '''\
+python-arcapi ({version}.{timestamp}~{commit}) UNRELEASED; urgency=medium
+
+  * ArcOS Debian packaging.
+
+ -- Arrcus <support@arrcus.com>  {datetime}
+'''.format(
+    version   = version,
+    timestamp = timestamp,
+    datetime  = time.strftime("%a, %e %b %Y %T +0000", time.gmtime(timestamp)),
+    commit    = commit)
+
+with open(build_dir + "/debian/changelog", "w") as f:
+    f.write(changelog)

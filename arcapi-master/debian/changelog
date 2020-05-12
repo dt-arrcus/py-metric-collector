@@ -1,0 +1,29 @@
+python-arcapi (0.4.2) UNRELEASED; urgency=medium
+
+  * Fix timing issue with initial command sent into local session
+
+ -- Arrcus <support@arrcus.com>  Tue, 28 Apr 2020 00:00:00 +0000
+ 
+python-arcapi (0.4.1) UNRELEASED; urgency=medium
+
+  * Handle _interactive_command() child session cleanup
+
+ -- Arrcus <support@arrcus.com>  Fri, 10 Apr 2020 00:00:00 +0000
+
+python-arcapi (0.4.0) UNRELEASED; urgency=medium
+
+  * Refactoring of entry logic/CLI handler
+
+ -- Arrcus <support@arrcus.com>  Sat, 15 Feb 2020 00:00:00 +0000
+
+python-arcapi (0.3.2) UNRELEASED; urgency=medium
+
+  * Non-interactive commands/validation additions
+
+ -- Arrcus <support@arrcus.com>  Sat, 15 Feb 2020 00:00:00 +0000
+
+python-arcapi (0.3.1) UNRELEASED; urgency=medium
+
+  * Python ArcAPI Debian packaging.
+
+ -- Arrcus <support@arrcus.com>  Fri, 22 Nov 2019 00:00:00 +0000

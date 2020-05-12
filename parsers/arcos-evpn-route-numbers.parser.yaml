@@ -1,0 +1,22 @@
+parser:
+    measurement: arcos_bgp_evpn_route_stats
+    command: show network-instance default protocol BGP default rib afi-safi L2VPN_EVPN loc-rib route | select state path-types 
+    type: regex
+    matches:
+        -  type: single-value
+           regex: \d\.\d\.\d\.\d\:\d+\:\[2\]
+           count: True
+           variable-name: bgp_evpn_type2_routes
+        -  type: single-value
+           regex: \d\.\d\.\d\.\d\:\d+\:\[3\]
+           count: True
+           variable-name: bgp_evpn_type3_routes
+        -  type: single-value
+           regex: \d\.\d\.\d\.\d\:\d+\:\[5\]
+           count: True
+           variable-name: bgp_evpn_type5_routes
+        -  type: single-value
+           regex: \d\.\d\.\d\.\d\:\d+\:\[\d\]
+           count: True
+           variable-name: bgp_evpn_total_routes
+

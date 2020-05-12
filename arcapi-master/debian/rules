@@ -1,0 +1,30 @@
+#!/usr/bin/make -f
+
+# See debhelper(7) (uncomment to enable)
+# output every command that modifies files on the build system.
+# DH_VERBOSE = 1
+
+
+# Minimal debian/rules file, no attempt at "hardening" etc.
+
+# Tell cmake to stop hiding stuff
+export VERBOSE := 1
+
+export DEB_CFLAGS_MAINT_APPEND = -DPROD_ENV
+export DEB_CXXFLAGS_MAINT_APPEND = ${DEB_CFLAGS_MAINT_APPEND}
+
+%:
+	dh $@
+
+override_dh_auto_clean:
+	dh_auto_clean
+
+# Append git-derived suffix to binary package version number.
+
+include /usr/share/dpkg/pkg-info.mk
+
+override_dh_shlibdeps:
+		dh_shlibdeps --dpkg-shlibdeps-params=--ignore-missing-info
+
+override_dh_gencontrol:
+		dh_gencontrol -- -v${DEB_VERSION}$$(git show --no-patch --format=.%ct.%H HEAD)

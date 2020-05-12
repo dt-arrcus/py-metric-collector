@@ -1,0 +1,927 @@
+{
+  "data": {
+    "ENTITY-MIB:ENTITY-MIB": {
+      "entPhysicalTable": {
+        "entPhysicalEntry": [
+          {
+            "entPhysicalIndex": 0,
+            "entPhysicalSerialNum": ""
+          },
+          {
+            "entPhysicalIndex": 1
+          }
+        ]
+      }
+    },
+    "IF-MIB:IF-MIB": {
+      "ifTable": {
+        "ifEntry": [
+          {
+            "ifIndex": 4,
+            "ifAdminStatus": "up"
+          },
+          {
+            "ifIndex": 5,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 6,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 7,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 8,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 9,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 10,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 11,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 12,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 13,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 14,
+            "ifAdminStatus": "up"
+          },
+          {
+            "ifIndex": 15,
+            "ifAdminStatus": "up"
+          },
+          {
+            "ifIndex": 16,
+            "ifAdminStatus": "up"
+          },
+          {
+            "ifIndex": 17,
+            "ifAdminStatus": "up"
+          },
+          {
+            "ifIndex": 18,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 19,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 20,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 21,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 22,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 23,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 24,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 25,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 26,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 27,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 28,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 29,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 30,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 31,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 32,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 33,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 34,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 35,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 36,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 37,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 38,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 39,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 40,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 41,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 42,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 43,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 44,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 45,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 46,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 47,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 48,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 49,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 50,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 51,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 52,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 53,
+            "ifAdminStatus": "down"
+          },
+          {
+            "ifIndex": 54,
+            "ifAdminStatus": "down"
+          }
+        ]
+      },
+      "ifXTable": {
+        "ifXEntry": [
+          {
+            "ifIndex": 4,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 5,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 6,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 7,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 8,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 9,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 10,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 11,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 12,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 13,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 14,
+            "ifPromiscuousMode": "false",
+            "ifAlias": "r2:swp10"
+          },
+          {
+            "ifIndex": 15,
+            "ifPromiscuousMode": "false",
+            "ifAlias": "r2:swp11"
+          },
+          {
+            "ifIndex": 16,
+            "ifPromiscuousMode": "false",
+            "ifAlias": "r2:swp12"
+          },
+          {
+            "ifIndex": 17,
+            "ifPromiscuousMode": "false",
+            "ifAlias": "RESERVED"
+          },
+          {
+            "ifIndex": 18,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 19,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 20,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 21,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 22,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 23,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 24,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 25,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 26,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 27,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 28,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 29,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 30,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 31,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 32,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 33,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 34,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 35,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 36,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 37,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 38,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 39,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 40,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 41,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 42,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 43,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 44,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 45,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 46,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 47,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 48,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 49,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 50,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 51,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 52,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 53,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          },
+          {
+            "ifIndex": 54,
+            "ifPromiscuousMode": "false",
+            "ifAlias": ""
+          }
+        ]
+      }
+    },
+    "SNMP-COMMUNITY-MIB:SNMP-COMMUNITY-MIB": {
+      "snmpCommunityTable": {
+        "snmpCommunityEntry": [
+          {
+            "snmpCommunityIndex": "public",
+            "snmpCommunityName": "public",
+            "snmpCommunitySecurityName": "public",
+            "snmpCommunityContextEngineID": "80:00:61:81:05:01"
+          }
+        ]
+      }
+    },
+    "SNMP-NOTIFICATION-MIB:SNMP-NOTIFICATION-MIB": {
+      "snmpNotifyTable": {
+        "snmpNotifyEntry": [
+          {
+            "snmpNotifyName": "std_v2_inform",
+            "snmpNotifyTag": "std_v2_inform",
+            "snmpNotifyType": "inform"
+          }
+        ]
+      }
+    },
+    "SNMP-TARGET-MIB:SNMP-TARGET-MIB": {
+      "snmpTargetAddrTable": {
+        "snmpTargetAddrEntry": [
+          {
+            "snmpTargetAddrName": "127.0.0.1 v2",
+            "snmpTargetAddrTDomain": "1.3.6.1.6.1.1",
+            "snmpTargetAddrTAddress": "127.0.0.1.23.112",
+            "snmpTargetAddrTimeout": 1500,
+            "snmpTargetAddrRetryCount": 3,
+            "snmpTargetAddrTagList": "std_v2_trap std_trap std_v2_inform std_inform",
+            "snmpTargetAddrParams": "target_v2",
+            "snmpTargetAddrStorageType": "nonVolatile",
+            "snmpTargetAddrEngineID": "",
+            "snmpTargetAddrTMask": "",
+            "snmpTargetAddrMMS": 2048
+          }
+        ]
+      },
+      "snmpTargetParamsTable": {
+        "snmpTargetParamsEntry": [
+          {
+            "snmpTargetParamsName": "target_v2",
+            "snmpTargetParamsMPModel": 1,
+            "snmpTargetParamsSecurityModel": 2,
+            "snmpTargetParamsSecurityName": "public",
+            "snmpTargetParamsSecurityLevel": "noAuthNoPriv",
+            "snmpTargetParamsStorageType": "nonVolatile"
+          }
+        ]
+      }
+    },
+    "SNMP-VIEW-BASED-ACM-MIB:SNMP-VIEW-BASED-ACM-MIB": {
+      "vacmSecurityToGroupTable": {
+        "vacmSecurityToGroupEntry": [
+          {
+            "vacmSecurityModel": 2,
+            "vacmSecurityName": "public",
+            "vacmGroupName": "all-rights"
+          }
+        ]
+      },
+      "vacmAccessTable": {
+        "vacmAccessEntry": [
+          {
+            "vacmGroupName": "all-rights",
+            "vacmAccessContextPrefix": "",
+            "vacmAccessSecurityModel": 0,
+            "vacmAccessSecurityLevel": "noAuthNoPriv",
+            "vacmAccessContextMatch": "exact",
+            "vacmAccessReadViewName": "internet",
+            "vacmAccessWriteViewName": "internet",
+            "vacmAccessNotifyViewName": "internet"
+          }
+        ]
+      },
+      "vacmViewTreeFamilyTable": {
+        "vacmViewTreeFamilyEntry": [
+          {
+            "vacmViewTreeFamilyViewName": "internet",
+            "vacmViewTreeFamilySubtree": "1.3.6.1",
+            "vacmViewTreeFamilyMask": "",
+            "vacmViewTreeFamilyType": "included"
+          },
+          {
+            "vacmViewTreeFamilyViewName": "internet",
+            "vacmViewTreeFamilySubtree": "1.0.8802.1.1.2"
+          }
+        ]
+      }
+    },
+    "arrcus-copp-service-policy:control-plane": {
+      "service-policy": [
+        {
+          "direction": "ingress",
+          "service-name": "__system_default_copp_policy__"
+        }
+      ]
+    },
+    "arrcus-openconfig-aaa-augment:aaa": {
+      "authentication": {
+        "users": {
+          "user": [
+            {
+              "username": "op",
+              "config": {
+                "username": "op",
+                "password": "$6$dyLhR/K9Mdui4q5c$PuI0v9fWiAjzzdNDu9VrSHXYBvULENm8bJtycITlNkyPkGZ1cX0h2EcG4en8rt0hNzUTCf6Ypz.2CK6YcIJyL.",
+                "role": "operators"
+              }
+            },
+            {
+              "username": "user",
+              "config": {
+                "username": "user",
+                "password": "$6$dztAmqWBYD6p8Iu9$hIdVu1SlWcAl.vqpsAdcWnQsRf/FDW8R3GNWpiPiyQ23L0ndjlqfsdPVLarEKmqaDLPPAxOTnrpWboDF/DOQ81",
+                "role": "admins"
+              }
+            }
+          ]
+        },
+        "root-credentials": {
+          "config": {
+            "password": "$6$bsTmo8equYdFyo6c$PZ/pnw6m305dcOSNGmX.N3y/Txj5XGa5Q/Qlal2K9WS1zUBR/zNKYUGENL2u56wQa8SzjDA2PMxpnocbkHpm60"
+          }
+        }
+      }
+    },
+    "confd_dyncfg:confdConfig": {
+      "encryptedStrings": {
+        "DES3CBC": {
+          "key1": "9D8E7A6D5B4E3E2F",
+          "key2": "D9E8A7D6B5E4E3F2",
+          "key3": "DEADBEEF99887766",
+          "initVector": "DEADBEEF99887766"
+        },
+        "AESCFB128": {
+          "key": "9D8E7A6D5B4E3E2FD9E8A7D6B5E4E3F2",
+          "initVector": "DEADBEEF9988776655443322DEADBEEF"
+        }
+      },
+      "logs": {
+        "confdLog": {
+          "enabled": true,
+          "file": {
+            "enabled": true,
+            "name": "/var/confd/log/confd.log"
+          },
+          "syslog": {
+            "enabled": false
+          }
+        },
+        "developerLog": {
+          "enabled": true,
+          "file": {
+            "enabled": true,
+            "name": "/var/confd/log/devel.log"
+          },
+          "syslog": {
+            "enabled": false
+          }
+        },
+        "auditLog": {
+          "enabled": true,
+          "file": {
+            "enabled": true,
+            "name": "/var/confd/log/audit.log"
+          },
+          "syslog": {
+            "enabled": false
+          }
+        },
+        "netconfLog": {
+          "enabled": false,
+          "file": {
+            "enabled": false,
+            "name": "/var/confd/log/netconf.log"
+          },
+          "syslog": {
+            "enabled": false
+          }
+        },
+        "snmpLog": {
+          "enabled": false,
+          "file": {
+            "enabled": false,
+            "name": "/var/confd/log/snmp.log"
+          },
+          "syslog": {
+            "enabled": false
+          }
+        },
+        "netconfTraceLog": {
+          "enabled": false,
+          "filename": "/var/confd/log/netconf.trace"
+        },
+        "errorLog": {
+          "enabled": false,
+          "filename": "/tmp/confderr.log",
+          "maxSize": "S10M"
+        }
+      },
+      "cli": {
+        "cPrompt1": "arcos:\\h\\M# ",
+        "cPrompt2": "arcos:\\h(\\m)# ",
+        "idleTimeout": "PT30M"
+      },
+      "webui": {
+        "transport": {
+          "tcp": {
+            "enabled": false,
+            "ip": "0.0.0.0",
+            "port": 8008
+          },
+          "ssl": {
+            "enabled": true,
+            "ip": "0.0.0.0",
+            "port": 8009,
+            "keyFile": "/mnt/onl/config/pki/key.pem",
+            "certFile": "/mnt/onl/config/pki/certificate"
+          }
+        }
+      },
+      "restconf": {
+        "enabled": true,
+        "schemaServerUrl": "https://r1:8009"
+      },
+      "snmpAgent": {
+        "enabled": false,
+        "system": {
+          "sysDescr": "ARCOS Agent",
+          "sysObjectID": "1.3.6.1.4.1.24961"
+        }
+      },
+      "netconf": {
+        "enabled": true
+      }
+    },
+    "ietf-netconf-acm:nacm": {
+      "write-default": "permit",
+      "rule-list": [
+        {
+          "name": "admin-access",
+          "group": ["admins", "root"],
+          "rule": [
+            {
+              "name": "any-access",
+              "action": "permit"
+            }
+          ]
+        },
+        {
+          "name": "any-group",
+          "group": ["operators"],
+          "rule": [
+            {
+              "name": "no-admin-nacm",
+              "path": "/nacm/rule-list[name='admin-access']",
+              "action": "deny"
+            },
+            {
+              "name": "user-info-change",
+              "path": "/ar-oc-aaa-aug:aaa/authentication/users/user[username='$USER']/config",
+              "action": "permit"
+            },
+            {
+              "name": "no-other-users",
+              "path": "/ar-oc-aaa-aug:aaa/authentication/users/user",
+              "action": "deny"
+            },
+            {
+              "name": "read-config",
+              "path": "/",
+              "access-operations": "create update delete",
+              "action": "deny"
+            }
+          ],
+          "tailf-acm:cmdrule": [
+            {
+              "name": "no-write-rule",
+              "context": "cli",
+              "command": "write",
+              "access-operations": "exec",
+              "action": "deny",
+              "comment": "Deny all non-admin groups from config changes"
+            },
+            {
+              "name": "no-shell-rule",
+              "context": "cli",
+              "command": "bash",
+              "access-operations": "exec",
+              "action": "deny",
+              "comment": "Deny all non-admin groups from shell access"
+            },
+            {
+              "name": "no-reset-config-rule",
+              "context": "cli",
+              "command": "reset-all-config",
+              "access-operations": "exec",
+              "action": "deny",
+              "comment": "Deny all non-admin groups from being able to reset config"
+            },
+            {
+              "name": "no-cancel-reset-config-rule",
+              "context": "cli",
+              "command": "cancel-reset-all-config",
+              "access-operations": "exec",
+              "action": "deny",
+              "comment": "Non-admin groups donot need access to cancel reset config"
+            }
+          ]
+        }
+      ]
+    },
+    "openconfig-interfaces:interfaces": {
+      "interface": [
+        {
+          "name": "ma1",
+          "config": {
+            "type": "iana-if-type:ethernetCsmacd",
+            "name": "ma1",
+            "enabled": true
+          },
+          "subinterfaces": {
+            "subinterface": [
+              {
+                "index": 0
+              }
+            ]
+          }
+        },
+        {
+          "name": "swp10",
+          "config": {
+            "type": "iana-if-type:ethernetCsmacd",
+            "name": "swp10",
+            "description": "r2:swp10",
+            "enabled": true
+          }
+        },
+        {
+          "name": "swp11",
+          "config": {
+            "type": "iana-if-type:ethernetCsmacd",
+            "name": "swp11",
+            "description": "r2:swp11",
+            "enabled": true
+          }
+        },
+        {
+          "name": "swp12",
+          "config": {
+            "type": "iana-if-type:ethernetCsmacd",
+            "name": "swp12",
+            "description": "r2:swp12",
+            "enabled": true
+          }
+        },
+        {
+          "name": "swp13",
+          "config": {
+            "type": "iana-if-type:ethernetCsmacd",
+            "name": "swp13",
+            "description": "RESERVED",
+            "enabled": true
+          }
+        }
+      ]
+    },
+    "openconfig-lldp:lldp": {
+      "interfaces": {
+        "interface": [
+          {
+            "name": "ma1",
+            "config": {
+              "name": "ma1"
+            }
+          },
+          {
+            "name": "swp10",
+            "config": {
+              "name": "swp10"
+            }
+          },
+          {
+            "name": "swp11",
+            "config": {
+              "name": "swp11"
+            }
+          },
+          {
+            "name": "swp12",
+            "config": {
+              "name": "swp12"
+            }
+          },
+          {
+            "name": "swp13",
+            "config": {
+              "name": "swp13"
+            }
+          }
+        ]
+      }
+    },
+    "openconfig-network-instance:network-instances": {
+      "network-instance": [
+        {
+          "name": "default",
+          "config": {
+            "name": "default"
+          }
+        },
+        {
+          "name": "management",
+          "config": {
+            "name": "management"
+          },
+          "interfaces": {
+            "interface": [
+              {
+                "id": "ma1",
+                "config": {
+                  "id": "ma1",
+                  "interface": "ma1",
+                  "subinterface": 0
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "openconfig-system:system": {
+      "config": {
+        "hostname": "r1",
+        "login-banner": "ARCOS (c) Arrcus, Inc."
+      }
+    }
+  }
+}

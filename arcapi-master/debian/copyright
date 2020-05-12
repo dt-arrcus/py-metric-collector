@@ -1,0 +1,10 @@
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: python-arcapi
+Source: https://arrcus.com/
+
+Files: *
+Copyright: 2020 Arrcus, Inc.
+License: Arrcus
+
+License: Arrcus
+ All rights reserved.

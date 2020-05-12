@@ -1,0 +1,13 @@
+parser:
+    measurement: arcos_mac_table_summary
+    command: show network-instance vlan* l2rib mac-entries | tab
+    type: regex
+    matches:
+        -  type: single-value
+           regex: (?:[0-9a-fA-F]:?){12}.*LOCAL.*
+           count: True
+           variable-name: local_macs
+        -  type: single-value
+           regex: (?:[0-9a-fA-F]:?){12}.*BGP.*
+           count: True
+           variable-name: remote_macs

@@ -1,0 +1,9 @@
+parser:
+    measurement: arcos_bgp_evpn_peer_stats
+    command: show network-instance default protocol BGP default all-neighbor * afi-safi l2vpn-evpn | select state session-state
+    type: regex
+    matches:
+        -  type: single-value
+           regex: \d+\.\d+\.\d+\.\d+\s+ESTABLISHED\s+L2VPN_EVPN
+           count: True
+           variable-name: bgp_evpn_estd_peer_count

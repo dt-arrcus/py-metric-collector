@@ -1,0 +1,20 @@
+Source: python-arcapi
+Maintainer: Arrcus Package Maintenance <packages@arrcus.com>
+Section: misc
+Priority: optional
+Standards-Version: 3.9.6
+Build-Depends: debhelper (>= 9),
+               python (>= 2.7),
+               python-setuptools
+Homepage: https://arrcus.com/
+
+Package: python-arcapi
+Architecture: all
+Depends: ${misc:Depends},
+	 python (>= 2.7),
+         python-lxml,
+         python-paramiko (>= 1.15),
+         python-pexpect (>= 3.2),
+         ${shlibs:Depends}
+Description: Python ArcAPI package.
+ Python libraries to interact w/ the Arrcus ArcOS management plane
