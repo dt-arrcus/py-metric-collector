@@ -2,6 +2,9 @@ import logging
 import requests
 from itertools import chain, islice, cycle
 
+from influxdb import InfluxDBClient
+
+
 logger = logging.getLogger('collector')
 
 
@@ -16,12 +19,10 @@ def print_format_influxdb(datapoints):
 def post_format_influxdb(datapoints, addr="http://localhost:8186/write"):
     with requests.session() as s:
         for chunk in chunks(format_datapoints_inlineprotocol(datapoints)):
-            resp = s.post(addr, data='\n'.join(chunk), timeout=5)
+            logger.info('Sending Datapoint to: %s' % addr)
+            resp = s.post(addr, data='\n'.join([ _ for _ in chunk]), timeout=5)
             if resp.status_code not in [200, 201, 204]:
                 logger.warning('Failed to send datapoint to influx')
-
-    logger.info('Sending Datapoint to: %s' % addr)
-
 
 def format_datapoints_inlineprotocol(datapoints):
     """
@@ -36,7 +37,6 @@ def format_datapoints_inlineprotocol(datapoints):
         tags = ''
         first_tag = 1
         for tag, value in datapoint['tags'].items():
-
             if first_tag == 1:
                 first_tag = 0
             else:
@@ -48,7 +48,6 @@ def format_datapoints_inlineprotocol(datapoints):
         fields = ''
         first_field = 1
         for tag, value in datapoint['fields'].items():
-
             if first_field == 1:
                 first_field = 0
             else:

@@ -1,12 +1,9 @@
 # GENERIC COMMANDS
-
 generic_commands:
    commands: |
-           show network-instance default protocol BGP default all-neighbor * afi-safi l2vpn-evpn | select state session-state | display json
-           show network-instance default protocol BGP default rib afi-safi L2VPN_EVPN loc-rib route route-type 2 | display json
-           show network-instance default protocol BGP default rib afi-safi L2VPN_EVPN loc-rib route route-type 3 | display json
-           show network-instance default protocol BGP default rib afi-safi L2VPN_EVPN loc-rib route route-type 5 | display json
+           show network-instance default protocol BGP default all-neighbor * afi-safi l2vpn-evpn | select state session-state
+           show network-instance default protocol BGP default rib afi-safi L2VPN_EVPN loc-rib route | select state path-types
+           show network-instance vlan* l2rib mac-entries | tab
    tags: arcos
-
-# Do not remove this three dashes (“---”) they are used to separate documents
+# Do not remove this three dashes ("---") they are used to separate documents
 ---

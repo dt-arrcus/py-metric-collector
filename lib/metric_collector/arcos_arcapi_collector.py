@@ -1,5 +1,6 @@
 import json
 import logging
+import time
 from arcapi import errors
 from arcapi import manager
 from arcapi.types import Encoding
@@ -44,9 +45,36 @@ class ArcosCollector(object):
         self.__is_connected = True
 
     def collect(self, command):
-        # use arcapi to run command
-        data = self.send_command(command=command)
-        print(data)
+        # find the command to execute from the parser directly
+        parser = self.parsers.get_parser_for(command)
+        data = self.send_command(parser['data']['parser']['command'])
+        if data is None:
+            return None
+
+        if parser['data']['parser']['type'] == 'textfsm':
+            data = etree.tostring(data)
+
+        datapoints = self.parsers.parse(input=command, data=data)
+        if datapoints is not None:
+            measurement = self.parsers.get_measurement_name(input=command)
+            timestamp = time.time_ns()
+            for datapoint in datapoints:
+                if not datapoint['fields']:
+                    continue
+                if datapoint['measurement'] == None:
+                    datapoint['measurement'] = measurement
+                datapoint['tags'].update(self.facts)
+                if self.context:
+                    datapoint['tags'].update(self.context)
+                datapoint['timestamp'] = timestamp
+                yield datapoint
+        else:
+            logger.warn('No parser found for command > %s',command)
+            return None
+        
+        #use arcapi to run command
+        #data = self.send_command(command=command,encoding=Encoding.JSON, cli=True)
+        #print(data)
 
     def collect_facts(self):
         if not self.__is_connected:
@@ -57,30 +85,33 @@ class ArcosCollector(object):
 
             logger.info('[%s]: Collection Facts on device', self.hostname)
             
-            fact_data = self.send_command(command='show version')
+            fact_data = self.send_command(command='show version',encoding=Encoding.JSON)
             if fact_data:
                 base_data =  fact_data['data']['openconfig-system:system']['arcos-openconfig-system-augments:version']['state']
                 self.facts['version'] = base_data['sw-version']
                 self.facts['product-model'] = base_data['product-name']
         return True
             
-    def send_command(self, command=None):
+    def send_command(self, command=None, encoding=Encoding.TEXT):
 
         logger.debug('[%s]: execute : %s', self.hostname, command)
-        result = self.manager.command(command=command, encoding=Encoding.JSON, cli=self.__use_arcos_cli)
+        result = self.manager.command(command=command, encoding=encoding, cli=self.__use_arcos_cli)
         if result.error:
              logger.error("Error found on <%s> executing command: %s, error: %s:", self.hostname, command, result.message)
              return None
         else:
-            return json.loads(result.message)
+            if encoding == Encoding.TEXT:
+                return result.message
+            elif encoding == Encoding.JSON:
+                return json.loads(result.message)
 
     def is_connected(self):
         return self.__is_connected
+
     def close(self):
 
         if self.__is_connected:
-            # arcapi doesn't have a close method so fake it
-            return True
+            self.manager.close_session()
 
 
 

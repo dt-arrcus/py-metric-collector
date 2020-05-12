@@ -129,6 +129,7 @@ class Collector:
             ### Send results to the right output
             try:
                 if self.output_type == 'stdout':
+                    logger.info('printing to stdout')
                     utils.print_format_influxdb(values)
                 elif self.output_type == 'http':
                     utils.post_format_influxdb(values, self.output_addr)

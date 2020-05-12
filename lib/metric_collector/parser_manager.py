@@ -102,7 +102,6 @@ class ParserManager:
 
         if "measurement" in parser['data']['parser'].keys():
           parser['measurement'] = parser['data']['parser']['measurement']
-
         self.__add_parser__( name=parser['name'], parser=parser )
 
   def __find_parser__( self, input=None ):
@@ -456,7 +455,7 @@ class ParserManager:
       
       yield data_structure
   
-
+  '''
   def __parse_regex__(self, parser=None, data=None):
 
     datas_to_return = []
@@ -470,7 +469,6 @@ class ParserManager:
 
     # logger.debug('REGEX, will try to parse %s' % data)
     logger.debug('REGEX, parser %s' % parser) 
-    
     for match in parser["data"]["parser"]["matches"]:
       
       logger.debug('REGEX, matches of type %s' % match["type"]) 
@@ -478,8 +476,10 @@ class ParserManager:
       if match["type"] == "single-value":
         regex = match["regex"]
         text_matches = re.search(regex,data,re.MULTILINE)
+        print(text_matches.groups())
         if text_matches:
-
+          print(text_matches.lastindex)
+          print(len(match["variables"]))
           if text_matches.lastindex == len(match["variables"]):
             logger.debug('We have (%s) matches with this regex %s', text_matches.lastindex,regex)
 
@@ -508,12 +508,47 @@ class ParserManager:
           logger.debug('No matches found for regex: %s', regex)
       else:
        logger.error('An unkown match-type found in parser with regex: %s', parser['name'])
-
+    print(datas_to_return)
 
     logger.debug('REGEX returned: %s', datas_to_return)
     logger.debug('Returning {} values.'.format(len(datas_to_return)))
     return datas_to_return
-
+    '''
+  def __parse_regex__(self, parser=None, data=None):
+    #XXX adi version
+    datas_to_return = []
+    ## Empty structure that needs to be filled and return for each input
+    data_struct = {
+        'measurement': None,
+        'tags': {},
+        'fields': {}
+    }
+    # logger.debug('REGEX, will try to parse %s' % data)
+    logger.debug('REGEX, parser %s' % parser)
+    #if 'measurement' in parser["data"]["parser"]:
+    #    data_struct['measurement'] = parser["data"]["parser"]['measurement']
+    for match in parser["data"]["parser"]["matches"]:
+      logger.debug('REGEX, matches of type %s' % match["type"])
+      if match["type"] == "single-value":
+        regex = match["regex"]
+      
+      if 'measurement' in match:
+          data_struct['measurement'] = match['measurement']
+      
+      try:
+          key = match['variable-name']
+      except KeyError as e:
+          logger.error('Invalid key error. {}'.format(e))
+          return data_struct
+      if ('count' in match) and (match['count'] == True):
+          text_matches = re.findall(regex,data,re.MULTILINE)
+          if text_matches:
+              value = len(text_matches)
+              data_struct['fields'][key] = value
+      datas_to_return.append(data_struct)
+    logger.debug('REGEX returned: %s', datas_to_return)
+    logger.debug('Returning {} values.'.format(len(datas_to_return)))
+    return datas_to_return
 
   def __parse_json__(self, parser=None, data=None):
 
@@ -566,6 +601,8 @@ class ParserManager:
         if value == enum_key:
           value = enum_value
           break
+    if 'count' in match:
+        value = len(value)
     if not self.is_valid_field(value):
       return data
     data['fields'][key] = value
@@ -609,6 +646,8 @@ class ParserManager:
             if value == enum_key:
               value = enum_value
               break
+        if 'count' in match:
+            value = len(value)
         if not self.is_valid_field(value):
           continue
         data['fields'][key] = value
